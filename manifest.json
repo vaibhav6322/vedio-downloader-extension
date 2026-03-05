@@ -1,0 +1,23 @@
+{
+  "name": "Video Downloader Extension",
+  "description": "Chrome extension scaffold for future video detection and download workflows.",
+  "version": "0.2.0",
+  "manifest_version": 3,
+  "permissions": ["downloads", "storage", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "src/background/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Video Downloader",
+    "default_popup": "src/popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

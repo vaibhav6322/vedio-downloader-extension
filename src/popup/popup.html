@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Video Downloader</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="popup__header">
+        <h1 class="popup__title">Video Downloader</h1>
+        <p class="popup__subtitle">Phase 6 multi-source quality selection</p>
+      </header>
+
+      <section class="popup__section">
+        <h2 class="popup__section-title">Detected Videos</h2>
+        <p id="statusText" class="popup__status">Waiting for page context...</p>
+        <ul id="videoList" class="popup__list">
+          <li class="popup__empty">No videos detected yet.</li>
+        </ul>
+      </section>
+      <section class="popup__section">
+        <h2 class="popup__section-title">Recent Downloads</h2>
+        <ul id="downloadHistoryList" class="popup__list">
+          <li class="popup__empty">No recent download activity.</li>
+        </ul>
+      </section>
+
+      <footer class="popup__footer">
+        <p id="downloadStatusText" class="popup__download-status"></p>
+        <button id="refreshButton" type="button" class="popup__button">
+          Refresh
+        </button>
+      </footer>
+    </main>
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>
